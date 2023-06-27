@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class Question7 {
+  public static void main(String[] args) {
+    int[] arr={0,1,0,3,12};
+    arr=movesZero(arr);
+    System.out.println(Arrays.toString(arr));
+  }
+
+  private static int[] movesZero(int[] arr) {
+    int pointer1=0;    //keep iterating array
+    int pointer2=0;    //keep track of positioning of non-zero elements
+    while(pointer1<arr.length){
+      if(arr[pointer1]!=0){
+        int temp=arr[pointer1];
+        arr[pointer1]=arr[pointer2];
+        arr[pointer2]=temp;
+        pointer2++;
+      }
+      pointer1++;
+    }
+    return arr;
+  }
+}
