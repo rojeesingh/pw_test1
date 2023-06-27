@@ -8,6 +8,9 @@ public class Question7 {
   }
 
   private static int[] movesZero(int[] arr) {
+       if(arr.length==1){
+      return arr;
+      }
     int pointer1=0;    //keep iterating array
     int pointer2=0;    //keep track of positioning of non-zero elements
     while(pointer1<arr.length){
